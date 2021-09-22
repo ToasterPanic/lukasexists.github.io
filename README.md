@@ -1,2 +1,3 @@
 # lukasexists.github.io
-My crappy site lol
+My website.
+I don't really know what else to add.
