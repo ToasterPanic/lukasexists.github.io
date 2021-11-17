@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="burger_anger.png"><SubTexture name="burger_anger down0000" x="0" y="0" width="512" height="365" frameX="0" frameY="0" frameWidth="512" frameHeight="365" />
-<SubTexture name="burger_anger idle0000" x="512" y="0" width="604" height="598" frameX="0" frameY="0" frameWidth="604" frameHeight="598" />
-<SubTexture name="burger_anger left0000" x="0" y="598" width="668" height="508" frameX="0" frameY="0" frameWidth="668" frameHeight="508" />
-<SubTexture name="burger_anger right0000" x="668" y="598" width="668" height="508" frameX="0" frameY="0" frameWidth="668" frameHeight="508" />
-<SubTexture name="burger_anger down0001" x="0" y="1106" width="478" height="323" frameX="0" frameY="0" frameWidth="478" frameHeight="323" />
-</TextureAtlas>
