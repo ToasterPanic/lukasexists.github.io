@@ -12,9 +12,6 @@
 	
 	<link rel="shortcut icon" type="image/png" href="./favicon.png">
 	
-	
-	<script type="text/javascript" src="./PsychEngine.js"></script>
-	
 	<script>
 		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
 		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
@@ -66,12 +63,9 @@
 	
 </head>
 <body>
-	<script type="text/javascript"></script>
 	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
 	
-	<div id="openfl-content" style="cursor: none;">
-		<canvas width="1280" height="720" style="transform: translateZ(0px); width: 960px; height: 540px; margin-left: 0px; margin-top: 0px;"></canvas>
-	</div>
+	<div id="openfl-content" style="cursor: none;"></div>
 	
 	<script type="text/javascript" src="./PsychEngine.js">
 		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
