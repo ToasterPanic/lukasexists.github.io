@@ -1,0 +1,39 @@
+{
+	"storyName": "angry hamburger man will kick your buns",
+	"hideFreeplay": false,
+	"weekBackground": "philly",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"burger",
+			"mcburger",
+			[
+				135,
+				80,
+				73
+			]
+		],
+		[
+			"buns",
+			"mcburger",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"weekName": "Burger"
+}
