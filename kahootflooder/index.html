@@ -7,8 +7,52 @@
     <meta name="description" content="cool flooder thing">
     <link id="favicon" rel="icon" href="https://cdn.glitch.com/c79157d1-63a7-4e5d-aad4-bd2fd43b6eb2%2Ffavicon.ico?v=1602774310666" type="image/x-icon">
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
+    <style>
+        .main {
+            margin-left: 160px; 
+            font-size: 18px;
+            padding: 0px 10px;
+        }
+        body {
+            font-family: "Monaco", "Lucida Console", monospace;
+            color: #00ff00;
+            font-size: 18px;
+        }
+        .sidenav {  
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+         }
+
+        .sidenav a {
+            padding: 1px 8px 1px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidenav a:hover {
+            color: #00aaff;
+        }
+
+        .main {
+            margin-left: 160px; 
+            padding: 0px 10px;
+        }
+        .grid-container {
+              display: grid;
+              grid-template-columns: 210px 210px 210px 210px;
+              padding: 10px;
+        }
+        .grid-item {
+             border: 1px solid rgba(0, 0, 0, 0.8);1
+        }
+    </style>
 
     <!-- import the webpage's client-side javascript file -->
     <script src="/script.js" defer=""></script>
