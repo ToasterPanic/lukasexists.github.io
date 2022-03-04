@@ -1,5 +1,5 @@
 # Security Policy
-
+honestly i dont think any of this is ever gonna be seen by anyone but just in case ill have it here
 ## Supported Projects
 
 ✔️ = yes
