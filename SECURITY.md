@@ -3,7 +3,9 @@ honestly i dont think any of this is ever gonna be seen by anyone but just in ca
 ## Supported Projects
 
 ✔️ = yes
+
 ⚠️ = only highly exploitable vulnerabilities
+
 ❌ = no
 
 | Project | Supported          |
