@@ -1,0 +1,111 @@
+<!DOCTYPE html >
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+        body {
+            font-family: "Tahoma";
+            color: #000000;
+            font-size: 13px;
+        }
+        input {
+            font-family: "Tahoma";
+            color: #000000;
+            font-size: 13px;
+        }
+        .txt {
+            font-family: "Tahoma";
+            color: #000000;
+            font-size: 13px;
+        }
+        .title {
+            font-size: 30px;
+        }
+    </style>
+    
+        
+        <title>LukasExists's Notepad</title>
+    </head>
+<body>
+<input type="text" name="title" id="title" class="title" value="Enter a title..." style="width:50%;height:40px">
+<textarea name="Text box" id="txt" class="txt" cols="0" rows="5" style="width:100%; height:300px; resize: vertical;"></textarea>
+<input type="button" name="Save" value="Save" onclick="save()"><input type="button" name="Delete" value="Delete" onclick="del()"><input type="button" name="Clear" value="Clear" onclick="clr()"><input type="button" name="Export" value="Export" onclick="downloadToFile(document.getElementById('txt').value, `${document.getElementById('title').value}.txt`, 'text/plain');"> <br>
+Welcome to lukasexists's Notepad. <br>
+I really wanted a notepad app that could save multiple files in LocalStorage, so I made this. <br>
+Saves stuff in localStorage, recommended to backup your notes. <h2>My Notes</h2>
+<div id="mngr" style="width:100%; height:70px; border: 2px solid black; overflow:scroll; overflow-x:scroll; overflow-y:hidden;">
+
+<script>
+const downloadToFile = (content, filename, contentType) => {
+  const a = document.createElement('a');
+  const file = new Blob([content], {type: contentType});
+  
+  a.href= URL.createObjectURL(file);
+  a.download = filename;
+  a.click();
+
+    URL.revokeObjectURL(a.href);
+};
+function del() {
+let confdel = confirm("Are you ABSOLUTELY SURE? When you delete a note, it's gone forever - you'll never get it back. If a file with the same name is saved in LocalStorage, that will be deleted too.");
+if (confdel == true) {
+  document.getElementById("txt").value = ""
+  localStorage.removeItem(document.getElementById("title").value)
+  document.getElementById("title").value = ""
+  alert("File deleted.")
+  load2()
+}
+}
+function clr() {
+let confdel = confirm("Are you sure you want to clear everything? Any unsaved progress will be lost!");
+if (confdel == true) {
+  document.getElementById("txt").value = ""
+  document.getElementById("title").value = ""
+  alert("Cleared.")
+}
+}
+function load2() {
+  document.getElementById("mngr").innerHTML = '';
+  for(let i=0; i<localStorage.length; i++) {
+    let key = localStorage.key(i);
+    let json = JSON.parse(localStorage.getItem(key));
+    let box = document.createElement("div");
+    box.style = "width:120px; height:40px; border: 2px solid black;"
+    box.innerHTML = json.title + "<br>"
+    let btn = document.createElement("input");
+    btn.type = "button"
+    btn.value = "Load"
+    btn.style = "height:22px"
+    box.appendChild(btn);
+    let btn2 = document.createElement("input");
+    btn2.type = "button"
+    btn2.value = "Delete"
+    btn2.style = "height:22px"
+    box.appendChild(btn2);
+    document.getElementById("mngr").appendChild(box);
+  }
+}
+function save() {
+  var txt = document.getElementById("txt").value;
+  var ttle = document.getElementById("title").value;
+  let json = JSON.stringify({text: txt, title: ttle})
+  localStorage.setItem(ttle, json);
+  alert("File saved to LocalStorage.");
+  load2()
+}
+function load(filename) {
+  if (filename == undefined) {
+  let filename = prompt("File name?", "MyNote");
+  }
+  let confload = confirm("Are you sure you want to load this file? All unsaved work will be lost!");
+  if (confload == true) {
+  let lstor = localStorage.getItem(filename);
+  let json = JSON.parse(lstor);
+  document.getElementById("txt").value = json.text
+  document.getElementById("title").value = json.title
+  alert("File loaded from LocalStorage.");
+}
+}
+load2()
+</script>
+
+</body>
+</html>
