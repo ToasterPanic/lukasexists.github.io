@@ -71,6 +71,7 @@ function load2() {
     btn.type = "button"
     btn.value = json.title
     btn.style = "height:32px"
+    btn.title = json.text
     btn.setAttribute("onclick",`load("${btn.value}")`);
     document.getElementById("mngr").appendChild(btn)
   }
