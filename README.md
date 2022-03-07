@@ -1,6 +1,2 @@
 # lukasexists.github.io
-my shitty website
-
-i don't even know what i'm doing lmao
-
-bugs? go to issues.
+cool things and dumb things are here. like that? star this repo.
