@@ -1,6 +1,6 @@
 {
-	"name":":LukasExists Notepad",
-	"short_name":"LEN",
+	"name":"Notepad",
+	"short_name":"LUEX-N",
 	"start_url":"index.html",
 	"display":"standalone",
 	"background_color":"#5900b3",
