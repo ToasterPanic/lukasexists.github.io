@@ -6,7 +6,7 @@
 	"background_color":"#5900b3",
 	"theme_color":"black",
 	"scope": ".",
-	"description":"My notepad's now an app. Cool.",
+	"description":"My notepad's now an app. Cool. ",
 	"icons":[
 	{
 	"src":"pwa/icon192.png",					
