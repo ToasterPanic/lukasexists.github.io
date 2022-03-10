@@ -97,7 +97,7 @@ function load2() {
     let key = localStorage.key(i);
     let json = JSON.parse(localStorage.getItem(key));
     let box = document.createElement("div");
-    box.style = "width:120px; height:40px; border: 2px solid #55555; display: table-cell; border-radius: 4px;"
+    box.style = "width:120px; height:40px; border: 2px solid #55555; border-radius: 4px; display: table-cell;"
     box.innerHTML = json.title + "<br>"
     let btn = document.createElement("input");
     btn.type = "button"
