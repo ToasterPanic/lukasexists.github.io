@@ -103,15 +103,15 @@ function load2() {
     btn.type = "button"
     btn.value = "Load"
     btn.style = "height:22px"
-    btn.class = "button1"
+    btn2.setAttribute("class", "button1");
     btn.setAttribute("onclick",`load("${json.title}")`);
     box.appendChild(btn);
     let btn2 = document.createElement("input");
     btn2.type = "button"
     btn2.value = "Delete"
     btn2.style = "height:22px"
+    btn2.setAttribute("class", "button1");
     btn2.setAttribute("onclick",`del("${json.title}")`);
-    btn2.class = "button1"
     box.appendChild(btn2);
     document.getElementById("mngr").appendChild(box);
   }
