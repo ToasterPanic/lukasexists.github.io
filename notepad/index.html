@@ -2,27 +2,66 @@
 <html>
 <head><link rel="icon" href="https://lukasexists.github.io/img/icon192.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
-        body {
-            font-family: "Tahoma";
-            color: #eee;
-            background-color:#222;
-            font-size: 13px;
+        .main {
+            margin-left: 160px; 
+            font-size: 18px;
+            padding: 0px 10px;
         }
-        input {
-            font-family: "Tahoma";
+        body {
+            font-family: "Monaco", "Roboto", monospace;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        .sidenav {  
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+         }
+
+        .sidenav a {
+            padding: 1px 8px 1px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidenav a:hover {
+            color: #00aaff;
+        }
+
+        .main {
+            margin-left: 160px; 
+            padding: 0px 10px;
+        }
+        .grid-container {
+              display: grid;
+              grid-template-columns: 210px 210px 210px 210px;
+              padding: 10px;
+        }
+        .grid-item {
+             border: 1px solid rgba(0, 0, 0, 0.8);1
+        }
+        
+          input {
+            font-family: "Roboto";
             color: #eee;
-            background-color:#444;
+            background-color:#333;
             font-size: 13px;
         }
         .txt {
-            font-family: "Tahoma";
+            font-family: "Roboto";
             color: #eee;
-            background-color:#444;
+            background-color:#333;
             font-size: 13px;
-            border: 1px solid black;
+            border: 2px solid black;
         }
         .title {
-            font-size: 30px;
+            font-size: 24px;
             display: block;
             border: 1px solid black;
         }
@@ -40,6 +79,26 @@
          .button1:hover {
           background-color: #555;
          } 
+        
+a:link {
+  color: #ff0000;
+  background-color: transparent;
+}
+a:visited {
+  color: #ff0000;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: #ff0000;
+  background-color: transparent;
+  text-decoration: underline overline dotted red;
+}
+a:active {
+  color: #990000;
+  background-color: transparent;
+  text-decoration: underline;
+}
     </style>
     <!-- Meta Tags required for
        Progressive Web App -->
@@ -55,14 +114,20 @@
         
         <title>LukasExists's Notepad</title>
     </head>
-<body>
+<body style="background-color:#222;">
+<div class="sidenav">
+            farty party <br>
+                <a href="https://lukasexists.github.io/index.html">Home</a> <br>
+    </div>
+    <div class="main">
 <input type="text" name="title" id="title" class="title" value="Enter a title..." style="width:50%;height:40px">
 <textarea name="Text box" id="txt" class="txt" cols="0" rows="5" style="width:100%; height:300px; resize: vertical;"></textarea>
 <input type="button" class="button1" name="Save" value="Save" onclick="save()"><input type="button" class="button1" name="Clear" value="Clear" onclick="clr()"><input type="button" class="button1" name="Export" value="Export" onclick="downloadToFile(document.getElementById('txt').value, `${document.getElementById('title').value}.txt`, 'text/plain');"> <br>
 Welcome to lukasexists's Notepad. <br>
-I really wanted a notepad app that could save multiple files in LocalStorage, so I made this. <br>
-Saves stuff in localStorage, recommended to backup your notes. <h2>My Notes</h2>
+I really wanted a notepad site that could store multiple files, so I made this. <br>
+Saves stuff in local storage. FILES WILL NOT SAVE IF YOU ARE USING INCOGNITO/PRIVATE BROWSING. PLEASE BACKUP YOUR NOTES. <h2>My Notes</h2>
 <div id="mngr" style="display: table-row; width:100%; height:70px; overflow:scroll; overflow-x:scroll; overflow-y:hidden;">
+</div>
 
 <script>
 const downloadToFile = (content, filename, contentType) => {
